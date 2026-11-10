@@ -1,0 +1,27 @@
+{
+ "n_images": 800,
+ "fields": {
+  "realism": {
+   "agree_pct": 96.875,
+   "kappa": 0.7628308509629067
+  },
+  "correct_class": {
+   "agree_pct": 99.125,
+   "kappa": 0.9418072990273506
+  },
+  "artefacts": {
+   "agree_pct": 98.875,
+   "kappa": 0.8802395209580839
+  },
+  "anomalies": {
+   "agree_pct": 100.0,
+   "kappa": 1.0
+  }
+ },
+ "validated": {
+  "reader_1": 693,
+  "reader_2": 663,
+  "both": 662,
+  "kappa": 0.8456734305108451
+ }
+}

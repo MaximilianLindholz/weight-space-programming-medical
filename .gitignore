@@ -1,0 +1,13 @@
+# datasets (MedMNIST downloads on first use; SynthUterus-ROI from Zenodo, see README)
+data/
+__pycache__/
+*.pyc
+.DS_Store
+# never commit credentials
+.env
+.env.*
+*.key
+*api_key*
+# the paper sources (the paper is on arXiv, not part of the repository)
+overleaf_paper.zip
+overleaf_paper/

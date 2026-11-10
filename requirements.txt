@@ -1,0 +1,11 @@
+numpy
+scipy
+pandas
+pyarrow
+torch
+medmnist>=3.0
+scikit-learn
+matplotlib
+pillow
+# MedSigLIP baseline only (gated model: accept the terms on huggingface.co/google/medsiglip-448, then `hf auth login`)
+transformers>=4.53

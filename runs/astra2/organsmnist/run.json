@@ -1,0 +1,65 @@
+{
+ "runner": "openai-responses-api",
+ "model": "gpt-6-astra",
+ "served_model": "gpt-6-astra",
+ "effort": "high",
+ "reasoning_summary": true,
+ "max_output_tokens": 128000,
+ "response_id": "resp_003741262abc9f34016af06d31f6e487d2bd3827c3437867ae",
+ "usage": {
+  "input_tokens": 1219,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 1216
+  },
+  "output_tokens": 17833,
+  "output_tokens_details": {
+   "reasoning_tokens": 15170
+  },
+  "total_tokens": 19052
+ },
+ "wall_time_s": 415.6,
+ "audit": {
+  "tool_free": true,
+  "tools_in_request": [],
+  "tools_in_response": [],
+  "num_turns": 1,
+  "output_item_types": [
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "message"
+  ],
+  "status": "completed",
+  "complete": true,
+  "incomplete_details": null
+ },
+ "time": "2026-11-08 13:45:05"
+}

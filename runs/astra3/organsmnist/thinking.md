@@ -1,0 +1,3 @@
+**Verifying organ dataset counts**
+
+I’m looking into the training counts for different organ datasets. The numbers are: for OrganSMNIST, train has 13,940, validation has 2,452, and test has 8,829. That seems correct! For OrganAMNIST, there's a training count of 34,561, with validation at 6,491 and test at 17,778. OrganCMNIST shows 13,000 for training, 2,392 for validation, and 8,268 for testing. I'm double-checking if the training count for OrganSMNIST is significantly higher based on multiple slices.

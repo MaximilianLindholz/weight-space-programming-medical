@@ -1,0 +1,3 @@
+**Evaluating filter thresholds**
+
+I’m working with Fluid10 and considering using various filters. I might start with a threshold of 0.5 for the bone filter, and I’m thinking about using relu for adjustments on other filters like x+.35 for general brightness and others for distinguishing between adipose and dark areas. I want to ensure I effectively detect contrasts, especially between fluid and bright. It seems crucial to properly use the identity thresholds for positive and negative adjustments.

@@ -1,0 +1,50 @@
+{
+ "runner": "openai-responses-api",
+ "model": "gpt-6-astra",
+ "served_model": "gpt-6-astra",
+ "effort": "high",
+ "reasoning_summary": true,
+ "max_output_tokens": 128000,
+ "response_id": "resp_03b7092943de3146016af06c24836087d2bde00f2c07787c50",
+ "usage": {
+  "input_tokens": 1090,
+  "input_tokens_details": {
+   "cache_write_tokens": 0,
+   "cached_tokens": 1087
+  },
+  "output_tokens": 8927,
+  "output_tokens_details": {
+   "reasoning_tokens": 7342
+  },
+  "total_tokens": 10017
+ },
+ "wall_time_s": 240.9,
+ "audit": {
+  "tool_free": true,
+  "tools_in_request": [],
+  "tools_in_response": [],
+  "num_turns": 1,
+  "output_item_types": [
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "reasoning",
+   "message"
+  ],
+  "status": "completed",
+  "complete": true,
+  "incomplete_details": null
+ },
+ "time": "2026-11-08 13:37:39"
+}

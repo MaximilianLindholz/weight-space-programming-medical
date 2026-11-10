@@ -1,0 +1,13 @@
+image,label,nearest_remaining,similarity
+class0_0002,0,class0_0078,0.9744
+class0_0104,0,class0_0140,0.9715
+class0_0077,0,class0_0078,0.9668
+class0_0111,0,class0_0153,0.9595
+class0_0006,0,class0_0073,0.9574
+class0_0047,0,class0_0071,0.9563
+class0_0023,0,class0_0042,0.954
+class0_0009,0,class0_0155,0.9538
+class0_0004,0,class0_0057,0.9529
+class0_0010,0,class0_0070,0.9508
+class3_0135,1,class3_0140,0.9645
+class3_0140,1,class3_0167,0.9629

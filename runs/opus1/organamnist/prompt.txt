@@ -1,0 +1,40 @@
+YOUR TASK: write, from scratch, the weights of a small convolutional network that solves this medical image classification task as well as possible. There is no training: no data, no loss, no gradients, no fine-tuning; you choose every number yourself. You have no tools: no code execution, no calculator, nothing to run, and you will not see any image from this dataset. This is a single response and you will get no feedback. First describe your design briefly (which image features each filter detects, and which evidence each output reads where), then write the edits block.
+
+THE DATASET: OrganAMNIST from MedMNIST v2 (Yang et al. 2023), official split. Task type: multi-class.
+Official description: The OrganAMNIST is based on 3D computed tomography (CT) images from Liver Tumor Segmentation Benchmark (LiTS). It is renamed from OrganMNIST_Axial (in MedMNIST v1) for simplicity. We use bounding-box annotations of 11 body organs from another study to obtain the organ labels. Hounsfield-Unit (HU) of the 3D images are transformed into gray-scale with an abdominal window. We crop 2D images from the center slices of the 3D bounding boxes in axial views (planes). The images are resized into 1×28×28 to perform multi-class classification of 11 body organs. 115 and 16 CT scans from the source training set are used as training and validation set, respectively. The 70 CT scans from the source test set are treated as the test set.
+Labels:
+  0: bladder
+  1: femur-left
+  2: femur-right
+  3: heart
+  4: kidney-left
+  5: kidney-right
+  6: liver
+  7: lung-left
+  8: lung-right
+  9: pancreas
+  10: spleen
+
+THE INPUT: one image of 28 x 28 pixels with 1 channel (grey). Each pixel value p in 0..255 is given to the network as x = (p / 255 - 0.5) / 0.5, i.e. in [-1, 1] (-1 = black, +1 = white). Rows go from 0 (top) to 27 (bottom), columns from 0 (left) to 27 (right), exactly as stored in the dataset arrays.
+
+THE OUTPUT: 11 logits, one per class; class scores are softmax(o).
+
+THE NETWORK (5,501 parameters; the same architecture as the gradient-trained baselines it is compared with):
+  h   = ReLU(conv3x3(x; CW, CB))     CW: 10 x 1 x 3 x 3, CB: 10   (stride 1, zero padding 1 -> 10 x 28 x 28)
+  g   = AvgPool4x4(h)                -> 10 x 7 x 7 (cell (i, j) averages pixel rows 4i..4i+3, columns 4j..4j+3)
+  o_n = sum over k, i, j of M[n, k, i, j] * g[k, i, j]  +  B[n]      M: 11 x 10 x 7 x 7, B: 11
+CW[k, c] is the 3 x 3 kernel of filter k on input channel c, applied as cross-correlation: kernel entry [a, b] multiplies the pixel at offset (a - 1, b - 1) (row, column). EVERY WEIGHT STARTS AT 0; you set the weights you need.
+
+HOW YOUR NETWORK IS SCORED: on the official test split with MedMNIST's official metrics: mean over classes of the one-vs-rest AUC of the softmax scores, and ACC of argmax. It is compared with networks of the same architecture trained by gradient descent on 256 labelled images and on the full training set.
+
+HOW TO WRITE THE WEIGHTS (numbers only; nothing is run). Write a code block whose opening line is three backticks followed by the word edits, one statement per line ('#' starts a comment; a long list may continue over the next lines). Tensors: CW, CB, M, B.
+
+```edits
+CW[0, 0] = [[0, 0, 0], [0, 1, 0], [0, 0, 0]]   # filter 0, channel 0: identity kernel
+CB[0] = -0.5                                    # one entry
+M[2, 0, 1:6, 1:3] = 0.1                         # output 2 reads filter 0 in grid rows 1..5, columns 1..2
+M[2, 0, 3] = [0, 0, 0.2, 0.2, 0.2, 0, 0]        # explicit values along the last axis
+B[:] = -1                                       # fill a range (a:b is half-open; ':' alone = the whole axis)
+M[:, 1] *= 2                                    # scale (also += and -=)
+```
+Ranges: a:b is half-open, a:b:s takes every s-th index. Statements apply in order; a later statement overwrites an earlier one. Only the LAST edits block of your reply is read; a statement that cannot be read is skipped (the others still apply). Values: plain decimal numbers (|v| <= 1e6); a list must have exactly the shape of the indexed block.

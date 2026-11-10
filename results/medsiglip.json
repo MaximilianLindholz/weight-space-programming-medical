@@ -1,0 +1,160 @@
+{
+ "chestmnist": {
+  "n_test": 2000,
+  "prompts": [
+   "a chest x-ray with no atelectasis",
+   "a chest x-ray showing atelectasis",
+   "a chest x-ray with no cardiomegaly",
+   "a chest x-ray showing cardiomegaly",
+   "a chest x-ray with no effusion",
+   "a chest x-ray showing effusion",
+   "a chest x-ray with no infiltration",
+   "a chest x-ray showing infiltration",
+   "a chest x-ray with no mass",
+   "a chest x-ray showing mass",
+   "a chest x-ray with no nodule",
+   "a chest x-ray showing nodule",
+   "a chest x-ray with no pneumonia",
+   "a chest x-ray showing pneumonia",
+   "a chest x-ray with no pneumothorax",
+   "a chest x-ray showing pneumothorax",
+   "a chest x-ray with no consolidation",
+   "a chest x-ray showing consolidation",
+   "a chest x-ray with no edema",
+   "a chest x-ray showing edema",
+   "a chest x-ray with no emphysema",
+   "a chest x-ray showing emphysema",
+   "a chest x-ray with no fibrosis",
+   "a chest x-ray showing fibrosis",
+   "a chest x-ray with no pleural",
+   "a chest x-ray showing pleural",
+   "a chest x-ray with no hernia",
+   "a chest x-ray showing hernia"
+  ],
+  "zero_shot": {
+   "auc": 0.665428442244688,
+   "acc": 0.7836428571428572
+  },
+  "linear_probe": {
+   "auc": 0.6617386051822356,
+   "acc": 0.9483214285714283
+  }
+ },
+ "pneumoniamnist": {
+  "n_test": 624,
+  "prompts": [
+   "a normal pediatric chest x-ray",
+   "a pediatric chest x-ray showing pneumonia"
+  ],
+  "zero_shot": {
+   "auc": 0.2733837387683542,
+   "acc": 0.3189102564102564
+  },
+  "linear_probe": {
+   "auc": 0.9352728468113083,
+   "acc": 0.7580128205128205
+  }
+ },
+ "breastmnist": {
+  "n_test": 156,
+  "prompts": [
+   "a breast ultrasound image showing a malignant tumor",
+   "a breast ultrasound image showing normal tissue or a benign lesion"
+  ],
+  "zero_shot": {
+   "auc": 0.6426482873851295,
+   "acc": 0.7307692307692307
+  },
+  "linear_probe": {
+   "auc": 0.8072263993316624,
+   "acc": 0.75
+  }
+ },
+ "organamnist": {
+  "n_test": 2000,
+  "prompts": [
+   "an axial abdominal CT image of the bladder",
+   "an axial abdominal CT image of the left femur",
+   "an axial abdominal CT image of the right femur",
+   "an axial abdominal CT image of the heart",
+   "an axial abdominal CT image of the left kidney",
+   "an axial abdominal CT image of the right kidney",
+   "an axial abdominal CT image of the liver",
+   "an axial abdominal CT image of the left lung",
+   "an axial abdominal CT image of the right lung",
+   "an axial abdominal CT image of the pancreas",
+   "an axial abdominal CT image of the spleen"
+  ],
+  "zero_shot": {
+   "auc": 0.6562639863942331,
+   "acc": 0.067
+  },
+  "linear_probe": {
+   "auc": 0.9143314675629451,
+   "acc": 0.5295
+  }
+ },
+ "organcmnist": {
+  "n_test": 2000,
+  "prompts": [
+   "an coronal abdominal CT image of the bladder",
+   "an coronal abdominal CT image of the left femur",
+   "an coronal abdominal CT image of the right femur",
+   "an coronal abdominal CT image of the heart",
+   "an coronal abdominal CT image of the left kidney",
+   "an coronal abdominal CT image of the right kidney",
+   "an coronal abdominal CT image of the liver",
+   "an coronal abdominal CT image of the left lung",
+   "an coronal abdominal CT image of the right lung",
+   "an coronal abdominal CT image of the pancreas",
+   "an coronal abdominal CT image of the spleen"
+  ],
+  "zero_shot": {
+   "auc": 0.6725735376739036,
+   "acc": 0.1025
+  },
+  "linear_probe": {
+   "auc": 0.9185335927499072,
+   "acc": 0.501
+  }
+ },
+ "organsmnist": {
+  "n_test": 2000,
+  "prompts": [
+   "an sagittal abdominal CT image of the bladder",
+   "an sagittal abdominal CT image of the left femur",
+   "an sagittal abdominal CT image of the right femur",
+   "an sagittal abdominal CT image of the heart",
+   "an sagittal abdominal CT image of the left kidney",
+   "an sagittal abdominal CT image of the right kidney",
+   "an sagittal abdominal CT image of the liver",
+   "an sagittal abdominal CT image of the left lung",
+   "an sagittal abdominal CT image of the right lung",
+   "an sagittal abdominal CT image of the pancreas",
+   "an sagittal abdominal CT image of the spleen"
+  ],
+  "zero_shot": {
+   "auc": 0.6182111432059588,
+   "acc": 0.0875
+  },
+  "linear_probe": {
+   "auc": 0.897754489354858,
+   "acc": 0.382
+  }
+ },
+ "uterusmnist": {
+  "n_test": 117,
+  "prompts": [
+   "a sagittal pelvic MRI of a uterus with anteflexion",
+   "a sagittal pelvic MRI of a uterus with retroflexion"
+  ],
+  "zero_shot": {
+   "auc": 0.8182349503214494,
+   "acc": 0.5299145299145299
+  },
+  "linear_probe": {
+   "auc": 0.9699006428988896,
+   "acc": 0.9145299145299145
+  }
+ }
+}
